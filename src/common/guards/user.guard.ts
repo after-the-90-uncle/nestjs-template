@@ -13,6 +13,7 @@ export class UserGuard implements CanActivate {
         }
         const session = await this.cache.get(token);
         if(!session) {
+            req.session.delete("sessionid")
             throw new HttpException("登录已失效",401)
         }
         req.user = session;

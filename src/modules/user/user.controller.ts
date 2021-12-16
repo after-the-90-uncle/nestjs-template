@@ -22,6 +22,6 @@ export default class UserController {
         req.session.set("sessionid","12123")
         response.setCookie("ddd","杜慧杰")
         console.log(response.setCookie)
-        return {a,b};
+        return {a};
     }
 }
