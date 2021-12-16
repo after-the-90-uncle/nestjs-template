@@ -24,7 +24,7 @@ require('dotenv').config();
       },
     }),
     RedisModule.register({
-      url:"redis://127.0.0.1:6379"
+      url:process.env.REDIS_URL
     }),
     UserModule
   ],
